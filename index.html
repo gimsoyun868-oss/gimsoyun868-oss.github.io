@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>김소윤 이력서 & 프로젝트 포트폴리오</title>
+  <meta name="description" content="김소윤 웹 이력서 및 프로젝트 포트폴리오">
+  <style>
+    :root {
+      --bg: #f7f7f4;
+      --paper: #ffffff;
+      --ink: #1f2933;
+      --muted: #667085;
+      --line: #d9dee6;
+      --accent: #143f6b;
+      --soft: #f1f4f7;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: "Malgun Gothic", "Apple SD Gothic Neo", "Segoe UI", Arial, sans-serif;
+      font-size: 15px;
+      line-height: 1.65;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap {
+      width: min(1120px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 42px 0 58px;
+      display: grid;
+      grid-template-columns: 285px minmax(0, 1fr);
+      gap: 42px;
+    }
+    .sidebar {
+      position: sticky;
+      top: 28px;
+      align-self: start;
+      padding: 24px 22px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+    .photo {
+      width: 124px;
+      height: 154px;
+      margin-bottom: 20px;
+      border: 1px solid var(--line);
+      overflow: hidden;
+      background: var(--soft);
+    }
+    .photo img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
+    h1 { margin: 0 0 10px; font-size: 30px; line-height: 1.15; }
+    .contact { margin: 18px 0 0; padding: 0; list-style: none; color: var(--muted); font-size: 13.5px; }
+    .contact li { margin: 7px 0; word-break: break-word; }
+    .nav {
+      margin-top: 22px;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+      display: grid;
+      gap: 7px;
+    }
+    .nav a { display: flex; align-items: center; gap: 9px; color: var(--ink); font-size: 14px; font-weight: 700; }
+    .nav a::before { content: ""; width: 6px; height: 6px; border-radius: 999px; background: var(--accent); }
+    section { padding: 26px 0; border-bottom: 1px solid var(--line); }
+    section:last-child { border-bottom: 0; }
+    .section-head { display: flex; justify-content: space-between; gap: 18px; align-items: baseline; margin-bottom: 14px; }
+    .section-head h2 { margin: 0; font-size: 21px; }
+    .section-note { margin: 0; color: var(--muted); font-size: 13px; }
+    .profile-grid, .two-col, .report-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .profile-card, .plain-card, .report-point {
+      border: 1px solid var(--line);
+      background: var(--paper);
+      border-radius: 8px;
+      padding: 14px;
+    }
+    .profile-card h3, .plain-card h3 { margin: 0 0 7px; font-size: 15px; color: var(--accent); }
+    .profile-card p, .plain-card p { margin: 0; color: #344054; }
+    .project, .entry {
+      display: grid;
+      grid-template-columns: 82px 1fr;
+      gap: 18px;
+      padding: 18px 0;
+      border-top: 1px solid #e8ebef;
+    }
+    .project:first-child, .entry:first-child { border-top: 0; padding-top: 0; }
+    .year { color: var(--muted); font-size: 13px; font-weight: 800; }
+    .project h3, .entry h3 { margin: 0 0 4px; font-size: 17px; }
+    .meta { margin: 0 0 6px; color: var(--muted); font-size: 13px; font-weight: 700; }
+    .desc { margin: 0 0 10px; color: #344054; }
+    .report-grid { margin: 10px 0; }
+    .report-point strong { display: block; margin-bottom: 4px; color: var(--accent); font-size: 13px; }
+    .report-point span { color: #344054; font-size: 13px; }
+    .links { display: flex; gap: 12px; flex-wrap: wrap; font-size: 13px; font-weight: 700; }
+    ul { margin: 0; padding-left: 19px; }
+    .signature { margin-top: 18px; color: var(--muted); }
+    @media (max-width: 860px) {
+      .wrap { width: min(100% - 28px, 720px); grid-template-columns: 1fr; gap: 22px; padding-top: 22px; }
+      .sidebar { position: static; }
+      .photo { width: 104px; height: 130px; }
+      .profile-grid, .two-col, .report-grid { grid-template-columns: 1fr; }
+      .project, .entry { grid-template-columns: 1fr; gap: 3px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <aside class="sidebar" aria-label="프로필">
+      <div class="photo"><img src="data:image/jpeg;base64,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" alt="김소윤 증명사진"></div>
+      <h1>김소윤</h1>
+      <ul class="contact">
+        <li>010-2739-5024</li>
+        <li><a href="mailto:gimsoyun868@gmail.com">gimsoyun868@gmail.com</a></li>
+        <li>서울특별시 광진구 구의동 242-87, B02호</li>
+        <li><a href="https://github.com/gimsoyun868-oss">GitHub</a></li>
+        <li><a href="#projects">Project Portfolio</a></li>
+      </ul>
+      <nav class="nav" aria-label="페이지 이동">
+        <a href="#profile">Profile</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#certificates">Certificates</a>
+      </nav>
+    </aside>
+
+    <div class="content">
+      <section id="profile">
+        <div class="section-head">
+          <h2>About Me</h2>
+          <p class="section-note">지원자 핵심 소개</p>
+        </div>
+        <p>
+          빅데이터 전공과 프로젝트 경험을 바탕으로 자료를 구조화하고, 진행 상황을 확인하며,
+          결과물을 문서화하는 데 강점이 있습니다. 교육운영 행정업무에서는 일정, 안내,
+          출결, 서류, 운영자료가 정확히 관리되는 것이 중요하다고 이해하고 있습니다.
+        </p>
+        <div class="profile-grid">
+          <article class="profile-card"><h3>정리하는 사람</h3><p>흩어진 자료와 진행 내용을 항목별로 나누어 보기 쉽게 정리합니다.</p></article>
+          <article class="profile-card"><h3>확인하는 사람</h3><p>일정, 제출자료, 누락 여부처럼 반복 확인이 필요한 업무를 꼼꼼히 챙깁니다.</p></article>
+          <article class="profile-card"><h3>기록하는 사람</h3><p>프로젝트 산출물, 문서, 보고서 형태로 업무 내용을 남기는 데 익숙합니다.</p></article>
+          <article class="profile-card"><h3>협업하는 사람</h3><p>팀 프로젝트와 동아리 활동을 통해 역할 분담, 진행 공유, 결과물 정리를 경험했습니다.</p></article>
+        </div>
+      </section>
+
+      <section id="projects">
+        <div class="section-head">
+          <h2>Selected Projects</h2>
+          <p class="section-note">프로젝트 포트폴리오</p>
+        </div>
+        <article class="project">
+          <div class="year">2026</div>
+          <div>
+            <h3>BARAM 2026 - 풍력발전량 예측 AI 경진대회</h3>
+            <p class="meta">데이터 로딩, EDA, 피처 설계, 학습/예측 파이프라인 구성 · 개인 프로젝트</p>
+            <p class="desc">기상예보 데이터와 SCADA 실측 데이터를 결합해 시간 단위 풍력발전량 예측 데이터셋과 학습/예측 흐름을 구성</p>
+            <div class="report-grid">
+              <div class="report-point"><strong>핵심 목표</strong><span>기상/실측 데이터를 결합해 발전량 예측용 데이터셋 구성</span></div>
+              <div class="report-point"><strong>산출물</strong><span>README, EDA 노트북, train/predict 스크립트, 제출 파일 생성 구조</span></div>
+            </div>
+            <div class="links"><a href="https://github.com/gimsoyun868-oss/baram2026">GitHub</a><a href="https://github.com/gimsoyun868-oss/baram2026/blob/main/README.md">README</a></div>
+          </div>
+        </article>
+        <article class="project">
+          <div class="year">2026</div>
+          <div>
+            <h3>MungNyang - 반려동물 통합 라이프 플랫폼</h3>
+            <p class="meta">서비스 기능 정리, 백엔드 구조 확인, API/ERD/MVP 문서 기반 프로젝트 관리 · 팀 프로젝트</p>
+            <p class="desc">반려동물 동반 장소, 건강기록, 커뮤니티, 예약, AI 추천 기능을 하나의 서비스 흐름으로 정리</p>
+            <div class="report-grid">
+              <div class="report-point"><strong>핵심 목표</strong><span>분산된 반려동물 정보를 하나의 통합 서비스 흐름으로 구성</span></div>
+              <div class="report-point"><strong>산출물</strong><span>README, API/ERD/MVP 문서, 기능별 백엔드 모듈 구조</span></div>
+            </div>
+            <div class="links"><a href="https://github.com/gimsoyun868-oss/MungNyang">GitHub</a><a href="https://github.com/gimsoyun868-oss/MungNyang/tree/main/docs">Docs</a></div>
+          </div>
+        </article>
+        <article class="project">
+          <div class="year">2026</div>
+          <div>
+            <h3>ETF Data Platform</h3>
+            <p class="meta">요구사항, 화면 목록, API 명세, ERD, 데이터 수집 구조 정리 · 개인 프로젝트</p>
+            <p class="desc">ETF 데이터 수집부터 화면 목록, API 명세, ERD까지 플랫폼 설계 산출물을 체계화</p>
+            <div class="report-grid">
+              <div class="report-point"><strong>핵심 목표</strong><span>ETF 데이터 수집부터 화면/API 설계까지 플랫폼 기준 정리</span></div>
+              <div class="report-point"><strong>산출물</strong><span>PROJECT_OVERVIEW, REQUIREMENTS, API_SPEC, ERD, WIRE</span></div>
+            </div>
+            <div class="links"><a href="https://github.com/gimsoyun868-oss/etf-data-platform">GitHub</a><a href="https://github.com/gimsoyun868-oss/etf-data-platform/tree/main/docs">Docs</a></div>
+          </div>
+        </article>
+        <article class="project">
+          <div class="year">2026</div>
+          <div>
+            <h3>Netflix Customer Churn Prediction</h3>
+            <p class="meta">SK Networks Family AI Camp 팀 프로젝트 · EDA, 전처리, 모델링, 성능 비교 보고서 정리</p>
+            <p class="desc">고객 이탈 예측을 위한 EDA, 전처리, 모델링, SHAP 분석과 보고서 산출물 정리</p>
+            <div class="report-grid">
+              <div class="report-point"><strong>핵심 목표</strong><span>고객 데이터를 기반으로 이탈 가능성을 예측하고 원인 해석</span></div>
+              <div class="report-point"><strong>산출물</strong><span>EDA/전처리/모델링 노트북, EDA 보고서, 모델 보고서, 앱 구조</span></div>
+            </div>
+            <div class="links"><a href="https://github.com/gimsoyun868-oss/SKNETWORKS-FAMILY-AICAMP-SKN28-2nd-2team">GitHub</a><a href="https://github.com/gimsoyun868-oss/SKNETWORKS-FAMILY-AICAMP-SKN28-2nd-2team/tree/main/reports">Reports</a></div>
+          </div>
+        </article>
+      </section>
+
+      <section id="experience">
+        <div class="section-head"><h2>Experience</h2><p class="section-note">경력 및 활동</p></div>
+        <article class="entry">
+          <div class="year">대학 재학 중</div>
+          <div>
+            <h3>synapse</h3>
+            <p class="meta">동아리 활동 · 프로그래밍 학습 및 팀 프로젝트 참여</p>
+            <p class="desc">프로그래밍 학습과 프로젝트 활동을 함께 진행하며 팀원들과 진행 상황을 공유하고, 필요한 자료를 정리하는 경험을 쌓았습니다. 프로젝트를 수행하는 과정에서 역할 분담, 결과물 정리, 발표자료 구성 등 협업 기반의 실무형 활동을 경험했습니다.</p>
+          </div>
+        </article>
+      </section>
+
+      <section id="education">
+        <div class="section-head"><h2>Education</h2><p class="section-note">학력사항</p></div>
+        <article class="entry"><div class="year">2021.03 - 2026.06</div><div><h3>용인대학교</h3><p class="meta">AI학부 빅데이터학과 · 수료</p></div></article>
+        <article class="entry"><div class="year">2018.03 - 2021.02</div><div><h3>삼일여자고등학교</h3><p class="meta">졸업</p></div></article>
+      </section>
+
+      <section id="certificates">
+        <div class="section-head"><h2>Certificates & Activities</h2><p class="section-note">자격 및 활동</p></div>
+        <div class="two-col">
+          <article class="plain-card">
+            <h3>Certificates</h3>
+            <ul>
+              <li>2022.12.08 Office PowerPoint® 2016 · Microsoft / Certiport</li>
+              <li>2022.10.27 Office Excel® 2016 · Microsoft / Certiport</li>
+              <li>MOS Master 보유 · Microsoft Office 문서 작성 및 자료 정리 가능</li>
+            </ul>
+          </article>
+          <article class="plain-card">
+            <h3>Awards / Activities</h3>
+            <ul>
+              <li>2026.07 SK Networks Family AI Camp 사업 참여 · 팀 프로젝트 수행</li>
+              <li>2025.12 - 2026.01 팹리스 실무형 일경험 프로그램 3기 · (주)넥스트칩</li>
+            </ul>
+          </article>
+        </div>
+        <p class="signature">
+          위 기재사항은 사실과 다름없음을 서약합니다.<br>
+          2026년 07월 13일 지원자: 김소윤
+        </p>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
